@@ -2,7 +2,6 @@
 #include<stdio.h>
 int x, c, b;
 void numx() {
-	scanf("%d", &x);
 	for (c = 1; c <= x; c++) {
 		for (b = x; b >= c; b--) {
 			printf("%d ", b);
@@ -12,6 +11,12 @@ void numx() {
 
 }
 int main() {
-	numx();
+	scanf("%d", &x);
+	if (x <= 0) {
+		printf("Error");
+	}
+	else {
+		numx();
+	}
 	return 0;
 }
